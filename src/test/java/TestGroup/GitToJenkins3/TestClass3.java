@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -29,10 +30,17 @@ public class TestClass3 {
 		js.executeScript("scrollBy(0, 5000)");
 		driver.findElement(By.linkText("Core Java")).click();
 
-		System.out.println(".............TC2.......");
 	}
+
 	@Test
 	public void main3() {
 		System.out.println("<<<<<<<TC3........");
+	}
+
+	@Test
+	public void main3B() {
+		System.out.println(".....TC3B.....");
+		Assert.assertEquals(true, false);
+		System.out.println(".....TC3C.....");
 	}
 }
